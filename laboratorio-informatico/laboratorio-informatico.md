@@ -234,7 +234,7 @@ Dopo aver installato Xcode può essere necessario impostare la giusta versione
 dei `command line tools` all'interno delle preferenze di Xcode. Per farlo è necessario
 lanciare XCode, aprire le preferenze con `cmd + ,` ed entrare nel pannello *Locations*
 
-![xcode locations](https://raw.githubusercontent.com/grammaton/didattica/gh-pages/_img/xcodelocations.png)
+![xcode locations](https://raw.githubusercontent.com/grammaton/didattica-blog/gh-pages/_img/xcodelocations.png)
 
 Selezionata la giusta versione dei `command line tools` si può procedere all'installazione
 dell'[API][API] csound attraverso node:
