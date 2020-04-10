@@ -1,14 +1,21 @@
 # Setup MacOS
 
-Questa guida ha lo scopo di preparare il proprio ambiente informatico installando passo passo i software consigliati per lo **studio** delle _tecnologie musicali_, la _musica elettronica_ e la _computer music_.
+Questa guida ha lo scopo di preparare il proprio ambiente informatico installando
+passo passo i software consigliati per lo **studio** delle _tecnologie musicali_,
+la _musica elettronica_ e la _computer music_.
 
-Tutti gli articoli presenti nelle pagine di questo sito fanno riferimento all'utilizzo di [free-software](https://en.wikipedia.org/wiki/Free_software) e [open-source](https://en.wikipedia.org/wiki/Open_source).
+Tutti gli articoli presenti nelle pagine di questo sito fanno riferimento
+all'utilizzo di [free-software](https://en.wikipedia.org/wiki/Free_software) e
+[open-source](https://en.wikipedia.org/wiki/Open_source).
 
-> **Support:** Data la possibilità di eventuali problematiche nell'installazione di software su macchine specifiche, qualsiasi segnalazione e contributo alla presente guida sarà di enorme utilità.
+> **Support:** Data la possibilità di eventuali problematiche nell'installazione
+di software su macchine specifiche, qualsiasi segnalazione e contributo alla
+presente guida sarà di enorme utilità.
 
 ## Lista dei software consigliati
 
-La presente guida illustra, preferibilmente e dove possibile, l'utilizzo del sistema operativo e delle applicazioni attraverso il **Terminale**.
+La presente guida illustra, preferibilmente e dove possibile, l'utilizzo del
+sistema operativo e delle applicazioni attraverso il **Terminale**.
 
 [Qui una buona guida introduttiva all'utilizzo del computer mediante **Terminale** \(ENG\)](https://www.learnenough.com/command-line-tutorial/basics).
 
@@ -23,9 +30,11 @@ La presente guida illustra, preferibilmente e dove possibile, l'utilizzo del sis
 ## Background Operativo
 
 Prima di procedere all'installazione di software aggiuntivi, il sistema operativo
-MacOS ha bisogno di essere equipaggiato con sistemi che lo rendano pronto o facilmente preparabile ad accettare sistemi di sviluppo open-source.
+MacOS ha bisogno di essere equipaggiato con sistemi che lo rendano pronto o
+facilmente preparabile ad accettare sistemi di sviluppo open-source.
 
-Il primo passo è controllare che ci siano installati sulla macchina i `command line tools` attraverso il terminale:
+Il primo passo è controllare che ci siano installati sulla macchina i
+`command line tools` attraverso il terminale:
 
 ```bash
 xcode-select --install
@@ -39,21 +48,49 @@ sistema operativo, anche i `command line tools` si aggiornano di conseguenza.
 Se altrimenti non risultassero presenti la procedura proseguirebbe con il
 download dei tools e la successiva schermata di installazione.
 
-Al termine dell'installazione dei `command line tools` si può procedere all'installazione di [**Homebrew**](https://brew.sh), un sistema di gestione di pacchetti aggiuntivi al sistema operativo. La cosa non deve spaventare, il sistema MacOS è basato su tecnologia [**UNIX**](https://en.wikipedia.org/wiki/Unix), che come accade per [**Linux**](https://en.wikipedia.org/wiki/Linux), può scendere ad un livello di capillarità molto elevato, se si conoscono i luoghi e gli oggetti che si stanno posizionando. [**Homebrew**](https://brew.sh) fa quello che deve fare per offrirci i pacchetti di cui abbiamo bisogno in maniera piuttosto pulita ed educata.
+Al termine dell'installazione dei `command line tools` si può procedere
+all'installazione di [**Homebrew**](https://brew.sh), un sistema di gestione di
+pacchetti aggiuntivi al sistema operativo. La cosa non deve spaventare, il sistema
+MacOS è basato su tecnologia [**UNIX**](https://en.wikipedia.org/wiki/Unix),
+che come accade per [**Linux**](https://en.wikipedia.org/wiki/Linux), può
+scendere ad un livello di capillarità molto elevato, se si conoscono i luoghi e
+gli oggetti che si stanno posizionando. [**Homebrew**](https://brew.sh) fa quello
+che deve fare per offrirci i pacchetti di cui abbiamo bisogno in maniera piuttosto
+pulita ed educata.
 
-Il software risponde dichiarando che andrà ad installare pacchetti in alcune posizioni specifiche:
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+```
 
-Si preme **RETURN** e passa la paura.
+Il software risponde dichiarando che andrà ad installare pacchetti in alcune
+posizioni specifiche, si preme **RETURN** e passa la paura.
 
-Di seguito una serie di script che personalizzano MacOS, io li considero necessari per un utilizzo informatico serio.
+Con il passare degli anni, questioni legate alla sicurezza informatica, alla
+tipologia di utilizzatore medio, il sistema operativo Mac è diventato discretamente
+più rigido e bloccato, al punto da rendere operazioni di sviluppo software più
+articolate che in passato. Di seguito una serie di script che personalizzano
+il sistema operativo che io considero necessari per un utilizzo informatico serio.
 
-attiva ed abilita l'opzione _ovunque_ per le applicazioni scaricate, nelle preferenze di sistema
+attiva ed abilita l'opzione _ovunque_ per le applicazioni scaricate, nelle preferenze
+di sistema
+```bash
+sudo spctl --master-disable
+```
 
-disattiva il pannello “Are you sure you want to open this application?” che appare ogni volta che si apre un'applicazione scaricata da web.
+disattiva il pannello “Are you sure you want to open this application?” che appare
+ogni volta che si apre un'applicazione scaricata da web.
+
+```bash
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+```
 
 disattiva il maiuscolo automatico, funzione molto scomoda nella programmazione testuale.
 
-### Atom
+```bash
+defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
+```
+
+## Atom
 
 Atom può essere scaricato direttamente dalla pagina ufficiale [atom.io](https://atom.io). Come dichiarato dagli sviluppatori, è un potente e versatile editor di testo, _hackable_. Il che significa tante cose, la più importante è che non è solo un editor di testo. Diventa altre cose, agendo nei posti giusti.
 
