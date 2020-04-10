@@ -20,19 +20,24 @@ La presente guida illustra, preferibilmente e dove possibile, l'utilizzo del sis
 * Computer Music: [**CSound**](https://csound.com), [**SuperCollider**](https://supercollider.github.io), [**PureData**](http://puredata.info)
 * DAW: [**Reaper**](https://www.reaper.fm)
 
-## Setup MacOS
+## Background Operativo
 
-Prima di procedere all'installazione di software aggiuntivi, il sistema operativo MacOS ha bisogno di essere equipaggiato con sistemi che lo rendano pronto o facilmente preparabile ad accettare sistemi di sviluppo open-source.
+Prima di procedere all'installazione di software aggiuntivi, il sistema operativo
+MacOS ha bisogno di essere equipaggiato con sistemi che lo rendano pronto o facilmente preparabile ad accettare sistemi di sviluppo open-source.
 
 Il primo passo è controllare che ci siano installati sulla macchina i `command line tools` attraverso il terminale:
 
-```text
+```bash
 xcode-select --install
 ```
 
-Nel caso questi siano già presenti nel sistema otterremo in risposta il seguente errore:
-
-Il che significa semplicemente che se si mantiene aggiornata la macchina con gli strumenti offerti normalmente dal sistema operativo, anche i `command line tools` si aggiornano di conseguenza. Se altrimenti non risultassero presenti la procedura proseguirebbe con il download dei tools e la successiva schermata di installazione.
+Nel caso questi siano già presenti nel sistema otterremo in risposta il seguente
+errore: `xcode-select: error: command line tools are already installed, use
+"Software Update" to install updates` il che significa semplicemente che se si
+mantiene aggiornata la macchina con gli strumenti offerti normalmente dal
+sistema operativo, anche i `command line tools` si aggiornano di conseguenza.
+Se altrimenti non risultassero presenti la procedura proseguirebbe con il
+download dei tools e la successiva schermata di installazione.
 
 Al termine dell'installazione dei `command line tools` si può procedere all'installazione di [**Homebrew**](https://brew.sh), un sistema di gestione di pacchetti aggiuntivi al sistema operativo. La cosa non deve spaventare, il sistema MacOS è basato su tecnologia [**UNIX**](https://en.wikipedia.org/wiki/Unix), che come accade per [**Linux**](https://en.wikipedia.org/wiki/Linux), può scendere ad un livello di capillarità molto elevato, se si conoscono i luoghi e gli oggetti che si stanno posizionando. [**Homebrew**](https://brew.sh) fa quello che deve fare per offrirci i pacchetti di cui abbiamo bisogno in maniera piuttosto pulita ed educata.
 
@@ -114,4 +119,3 @@ apm install language-csound linter-csound ide-csound
 I pacchetti [Atom](http://atom.io) relativi a Csound così come il legame tra node.js e csound-api sono sviluppati da [Nate Whetsell](https://github.com/nwhetsell).
 
 [Qui una breve guida con un esempio di utilizzo di Csound all'interno di Atom](https://grammaton.github.io/didattica/esempio/csound).
-
